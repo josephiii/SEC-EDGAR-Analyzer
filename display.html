@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC EDGAR Analyzer</title>
+</head>
+<body>
+
+    <div class="display-container">
+
+        <div class="stockName-container">
+            <h1 id="company-name">Company</h1>
+            <h2 id="company-symbol">Symbol</h2>
+            <div id="company-website">Website</div>
+        </div>
+
+        <div class="stockMetrics-container">
+            <h2 id="metrics-header">Metrics Information</h2>
+            <div class="metrics">
+                <div class="metric-item">
+                    <div class="metric-label">Price</div>
+                    <div id="price" class="metric-value">--</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Shares</div>
+                    <div id="shares" class="metric-value">--</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Market Cap</div>
+                    <div id="marketCap" class="metric-value">--</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Total Cash</div>
+                    <div id="totalCash" class="metric-value">--</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Total Debt</div>
+                    <div id="totalDebt" class="metric-value">--</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Enterprise Value</div>
+                    <div id="enterpriseValue" class="metric-value">--</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stockIndustry-container">
+            <h2 id="fieldIndustry-header">Industry Information</h2>
+            <div class="industry">
+                <div class="industry-item">
+                    <span class="industry-lable">Sector</span>
+                    <span id="company-sector" class="industry-value">--</span>
+                </div>
+                <div class="industry-item">
+                    <span class="industry-lable">Industry</span>
+                    <span id="company-industry" class="industry-value">--</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/initData.js"></script>
+</body>
+</html>

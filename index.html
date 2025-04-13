@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC EDGAR Analyzer</title>
+</head>
+<body>
+    <h1>Welcome to SEC EDGAR Analyzer</h1>
+
+    <div id="form-container">
+        <h3>Please enter your company ticker symbol</h3>
+        <form id="edgar-form" action="display.html" method="get">
+            <input type="text" id="ticker" name="ticker" placeholder="TICKER..." required>
+            <div id="submit-btn">
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/initData.js"></script>
+</body>
+</html>

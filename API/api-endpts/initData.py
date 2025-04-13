@@ -1,9 +1,28 @@
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 import uvicorn
 import yfinance as yf
+import os
 
 app = FastAPI()
+
+#I dont understand the path handling but it works
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+app.mount('/static', StaticFiles(directory=os.path.join(ROOT, 'static')), name='static')
+app.mount('/js', StaticFiles(directory=os.path.join(ROOT, 'js')), name='js')
+
+
+@app.get('/')
+@app.get('/index.html')
+def index():
+    return FileResponse(os.path.join(ROOT, 'templates', 'index.html'))
+
+@app.get('/display')
+def display():
+    return FileResponse(os.path.join(ROOT, 'templates', 'display.html'))
+
 
 @app.get('/api/ticker/{ticker}')
 def tickerData(ticker: str):
@@ -34,4 +53,4 @@ def tickerData(ticker: str):
             
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port="5500" )
+    uvicorn.run(app, host="127.0.0.1", port=5500)

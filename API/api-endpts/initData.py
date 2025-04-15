@@ -15,7 +15,6 @@ app.mount('/js', StaticFiles(directory=os.path.join(ROOT, 'js')), name='js')
 
 
 @app.get('/')
-@app.get('/index.html')
 def index():
     return FileResponse(os.path.join(ROOT, 'templates', 'index.html'))
 
@@ -53,4 +52,4 @@ def tickerData(ticker: str):
             
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=5500)
+    uvicorn.run(app, host="127.0.0.1", port=8000)

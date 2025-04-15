@@ -22,6 +22,10 @@ def index():
 def display():
     return FileResponse(os.path.join(ROOT, 'templates', 'display.html'))
 
+@app.get('/statement')
+def statement():
+    return FileResponse(os.path.join(ROOT, 'templates', 'statement.html'))
+
 
 @app.get('/api/ticker/{ticker}')
 def tickerData(ticker: str):

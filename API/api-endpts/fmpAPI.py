@@ -17,11 +17,32 @@ class fmpAPI:
         response.raise_for_status()
         return response.json()
     
-    def incomeStatement(self):
-        pass
+    def incomeStatement(self, symbol, period="annual", limit=5, datatype="json"):
+        
+        endpoint = f"income-statement/{symbol}"
+        params = {
+            'period': period,
+            'limit': limit,
+            'datatype': datatype
+        }
+        return self._request(endpoint, params)
 
-    def balanceSheet(self):
-        pass
+    def balanceSheet(self, symbol, period="annual", limit=5, datatype="json"):
+        
+        endpoint = f"balance-sheet-statement/{symbol}"
+        params = {
+            'period': period,
+            'limit': limit,
+            'datatype': datatype
+        }
+        return self._request(endpoint, params)
 
-    def cashFlow(self):
-        pass
+    def cashFlow(self, symbol, period="annual", limit=5, datatype="json"):
+        
+        endpoint = f"cash-flow-statement/{symbol}"
+        params = {
+            'period': period,
+            'limit': limit,
+            'datatype': datatype
+        }
+        return self._request(endpoint, params)

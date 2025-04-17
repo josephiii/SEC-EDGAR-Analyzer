@@ -8,6 +8,46 @@
 <body>
     <h1 id="statement-title">Financial Statement Analyzer</h1>
     
-    <div></div>
+    <div class="date-period-selection">
+        <div id="period-wrapper">
+            <lable>Period<select id="period" name="period">
+                <option value="annual">Annual</option>
+                <option value="quarter-one">Q1</option>
+                <option value="quarter-two">Q2</option>
+                <option value="quarter-three">Q3</option>
+                <option value="quarter-four">Q4</option>
+            </select></lable>
+        </div>
+        <div id="date-wrapper">
+            <lable>Year<select id="date" name="date">
+                <!-- Dates will be added by JavaScript -->
+            </select></lable>
+        </div>
+    <div>
+
+    <div class="statements-container">
+        <div class="income-statement-wrapper">
+            <h2 id="income-statement-title">Income Statement</h2>
+            <table class="financial-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Revenue</td></tr>
+                    <tr><td>Cost of Revenue</td></tr>
+                    <tr><td>Gross Profit</td></tr>
+                    <tr><td>Operating Expenses</td></tr>
+                    <tr><td>Operating Income</td></tr>
+                    <tr><td>Net Income</td></tr>
+                    <tr><td>EPS</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/js/statement.js"></script>
 </body>
 </html>

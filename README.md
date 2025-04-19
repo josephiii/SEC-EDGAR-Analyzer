@@ -26,3 +26,22 @@ Target Users: novice investors, researchers, anyone who wants a quick overview o
         - total debt
         - enterprise value
     - Display the sector and competition the company faces 
+
+--UI Planning--
+Base Colors:
+#0A0E17 – Night-sky black
+#121826 – Dark navy for depth layering
+
+Accent Colors:
+- to be decided
+
+Typography/Lines:
+#E5E7EB – Light gray for body text
+#9CA3AF – Muted gray for labels or hints
+
+Primary Font (UI, body, headlines):
+Inter 
+
+Secondary Font (for metrics, data displays, subtle styling):
+IBM Plex Mono or Space Mono 
+
